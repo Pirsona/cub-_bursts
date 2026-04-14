@@ -159,3 +159,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c24cbb914284204fb6ec638142a9622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _minSpliteCube: 2
+  _maxSpliteCube: 6
+  _cubePrefab: {fileID: 7994586348377124974}
+  _decreaseScale: 2
+  _maxChanceSplit: 100
+  _forceExplode: 10
+  _radiusExplode: 10
