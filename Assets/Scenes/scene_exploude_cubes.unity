@@ -896,9 +896,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1041368497}
+  - component: {fileID: 1041368501}
   - component: {fileID: 1041368500}
   - component: {fileID: 1041368499}
-  - component: {fileID: 1041368501}
   m_Layer: 0
   m_Name: ContollerCube
   m_TagString: Untagged
@@ -949,10 +949,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _minSpliteCube: 2
   _maxSpliteCube: 6
-  _reader: {fileID: 963194229}
-  _exploder: {fileID: 1041368499}
-  _colorChanger: {fileID: 1041368501}
-  _decreaseScale: 2
 --- !u!114 &1041368501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -962,9 +958,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1041368496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2df7fde8020e54d44ad8fce02ff434a6, type: 3}
+  m_Script: {fileID: 11500000, guid: 57481beb948911044a60b791c014a839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _reader: {fileID: 963194229}
+  _exploder: {fileID: 1041368499}
+  _cubeSpawner: {fileID: 1041368500}
+  _decreaseScale: 2
 --- !u!1 &1166045447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,22 +1466,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2290323337068548186, guid: c5edf80f699132e46a79845c73a2b07c, type: 3}
-      propertyPath: _inputReader
-      value: 
-      objectReference: {fileID: 963194229}
-    - target: {fileID: 4363355145084481511, guid: c5edf80f699132e46a79845c73a2b07c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4363355145084481511, guid: c5edf80f699132e46a79845c73a2b07c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4363355145084481511, guid: c5edf80f699132e46a79845c73a2b07c, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 4363355145084481511, guid: c5edf80f699132e46a79845c73a2b07c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.193355
@@ -1526,8 +1510,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2290323337068548186, guid: c5edf80f699132e46a79845c73a2b07c, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
