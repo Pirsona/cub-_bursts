@@ -898,6 +898,7 @@ GameObject:
   - component: {fileID: 1041368497}
   - component: {fileID: 1041368500}
   - component: {fileID: 1041368499}
+  - component: {fileID: 1041368501}
   m_Layer: 0
   m_Name: ContollerCube
   m_TagString: Untagged
@@ -950,7 +951,20 @@ MonoBehaviour:
   _maxSpliteCube: 6
   _reader: {fileID: 963194229}
   _exploder: {fileID: 1041368499}
+  _colorChanger: {fileID: 1041368501}
   _decreaseScale: 2
+--- !u!114 &1041368501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041368496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df7fde8020e54d44ad8fce02ff434a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1166045447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,6 +1537,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 963194228}
+  - {fileID: 1041368497}
   - {fileID: 705507995}
   - {fileID: 1166045448}
   - {fileID: 2064460956}
@@ -1530,4 +1545,3 @@ SceneRoots:
   - {fileID: 903330924}
   - {fileID: 1676369020}
   - {fileID: 4181425015343554708}
-  - {fileID: 1041368497}

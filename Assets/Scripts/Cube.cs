@@ -21,10 +21,8 @@ public class Cube : MonoBehaviour
         Rigidbody = GetComponent<Rigidbody>();
     }
 
-
     public void SetupChance(int newChance)
     {
         CurrentChanceSplit = newChance;
     }
-
 }

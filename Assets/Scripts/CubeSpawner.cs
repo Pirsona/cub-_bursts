@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class CubeSpawner : MonoBehaviour
 {
-
     [SerializeField, Min(1)] private int _minSpliteCube;
     [SerializeField, Min(1)] private int _maxSpliteCube;
 
@@ -40,9 +39,9 @@ public class CubeSpawner : MonoBehaviour
         if (IsSuccessSplit(currentCube))
         {
             int newChance = currentCube.CurrentChanceSplit / _decreaseNumberChance;
-            List<Rigidbody> explodeObject = SpawnObjects(currentCube, newChance);
+            List<Rigidbody> explodeObjects = SpawnObjects(currentCube, newChance);
 
-            _exploder.Explode(explodeObject);
+            _exploder.Explode(explodeObjects);
         }
 
         Destroy(currentCube.gameObject);
@@ -51,8 +50,8 @@ public class CubeSpawner : MonoBehaviour
     public List<Rigidbody> SpawnObjects(Cube clickedCube, int newChance)
     {
         List<Rigidbody> explodeObjects = new List<Rigidbody>();
-
         int countSpliteCube = UnityEngine.Random.Range(_minSpliteCube, _maxSpliteCube + 1);
+
         clickedCube.transform.localScale /= _decreaseScale;
 
         for (int i = 0; i < countSpliteCube; i++)
