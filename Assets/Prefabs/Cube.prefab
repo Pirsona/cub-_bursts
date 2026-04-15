@@ -14,9 +14,6 @@ GameObject:
   - component: {fileID: 2351167950575174865}
   - component: {fileID: 1204337526651315022}
   - component: {fileID: 3825143663267637272}
-  - component: {fileID: 310033941076812483}
-  - component: {fileID: 4625753258475906404}
-  - component: {fileID: 4900523099398465390}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -149,47 +146,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea6e93aa072095d489e087dce6df39ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _splitter: {fileID: 310033941076812483}
-  _exploder: {fileID: 4625753258475906404}
   _maxChanceSplit: 100
---- !u!114 &310033941076812483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7994586348377124974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b7414ff6a263bc489523541ad968029, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _minSpliteCube: 2
-  _maxSpliteCube: 6
-  _decreaseScale: 2
---- !u!114 &4625753258475906404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7994586348377124974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a1fbbf4d6c4fb64b898f8f19e31c660, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _forceExplode: 20
-  _radiusExplode: 20
---- !u!114 &4900523099398465390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7994586348377124974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2df7fde8020e54d44ad8fce02ff434a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

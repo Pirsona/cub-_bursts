@@ -5,6 +5,10 @@ public class InputReader : MonoBehaviour
 {
     [SerializeField] private Camera _camera;
     [SerializeField] private float _maxDistance;
+   
+    public event Action<Cube> MouseClicked;
+    
+    private int leftMouseClicked = 0;
 
     private void Update()
     {
@@ -12,14 +16,14 @@ public class InputReader : MonoBehaviour
         RaycastHit hit;
         Debug.DrawRay(_ray.origin, _ray.direction * _maxDistance, Color.red);
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(leftMouseClicked))
         {
 
             if (Physics.Raycast(_ray, out hit, Mathf.Infinity))
             {
                 if(hit.transform.TryGetComponent(out Cube cube))
                 {
-                    cube.Initiate();
+                    MouseClicked?.Invoke(cube);
                 }
             }
         }

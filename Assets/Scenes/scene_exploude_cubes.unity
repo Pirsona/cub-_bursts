@@ -887,6 +887,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 963194227}
   _maxDistance: 20
+--- !u!1 &1041368496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1041368497}
+  - component: {fileID: 1041368500}
+  - component: {fileID: 1041368499}
+  m_Layer: 0
+  m_Name: ContollerCube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1041368497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041368496}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1933551, y: 6.9699993, z: 1.0518289}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1041368499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041368496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a1fbbf4d6c4fb64b898f8f19e31c660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _forceExplode: 20
+  _radiusExplode: 20
+--- !u!114 &1041368500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041368496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7414ff6a263bc489523541ad968029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _minSpliteCube: 2
+  _maxSpliteCube: 6
+  _reader: {fileID: 963194229}
+  _exploder: {fileID: 1041368499}
+  _decreaseScale: 2
 --- !u!1 &1166045447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,3 +1530,4 @@ SceneRoots:
   - {fileID: 903330924}
   - {fileID: 1676369020}
   - {fileID: 4181425015343554708}
+  - {fileID: 1041368497}
