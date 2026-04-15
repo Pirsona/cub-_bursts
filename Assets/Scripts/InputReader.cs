@@ -17,9 +17,9 @@ public class InputReader : MonoBehaviour
 
             if (Physics.Raycast(_ray, out hit, Mathf.Infinity))
             {
-                if(hit.transform.TryGetComponent(out SplitterCube splitterCube))
+                if(hit.transform.TryGetComponent(out Cube cube))
                 {
-                    splitterCube.Initiate();
+                    cube.Initiate();
                 }
             }
         }
