@@ -5,6 +5,7 @@ public class GameHandler : MonoBehaviour
 {
     [SerializeField] private InputReader _reader;
     [SerializeField] private Exploder _exploder;
+    [SerializeField] private AreaExploder _areaExploder;
     [SerializeField] private CubeSpawner _cubeSpawner;
     [SerializeField] private float _decreaseScale;
 
@@ -34,6 +35,11 @@ public class GameHandler : MonoBehaviour
             SetUpChildren(createdObjects, newChance, newScale);
 
             _exploder.Explode(createdObjects, cube.transform.position);
+        }
+        else
+        {
+            float explodeScale = 1f / cube.transform.localScale.x;
+            _areaExploder.ExplodeInRadius(cube.transform.position, explodeScale);
         }
 
         Destroy(currentCube.gameObject);

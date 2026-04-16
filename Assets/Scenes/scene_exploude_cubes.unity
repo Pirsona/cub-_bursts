@@ -899,6 +899,7 @@ GameObject:
   - component: {fileID: 1041368501}
   - component: {fileID: 1041368500}
   - component: {fileID: 1041368499}
+  - component: {fileID: 1041368502}
   m_Layer: 0
   m_Name: ContollerCube
   m_TagString: Untagged
@@ -933,8 +934,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1fbbf4d6c4fb64b898f8f19e31c660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _forceExplode: 20
-  _radiusExplode: 20
+  _forceExplode: 400
+  _radiusExplode: 5
 --- !u!114 &1041368500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -963,8 +964,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _reader: {fileID: 963194229}
   _exploder: {fileID: 1041368499}
+  _areaExploder: {fileID: 1041368502}
   _cubeSpawner: {fileID: 1041368500}
   _decreaseScale: 2
+--- !u!114 &1041368502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041368496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c4e95eecb84014d95763e690a227e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _forceExplode: 1000
+  _radiusExplode: 10
 --- !u!1 &1166045447
 GameObject:
   m_ObjectHideFlags: 0
