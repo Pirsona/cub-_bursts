@@ -1,9 +1,11 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Renderer))]
+
 public class ColorChanger : MonoBehaviour
 {
     private void Start()
     {
-        gameObject.GetComponent<Renderer>().material.color = Random.ColorHSV();
+       GetComponent<Renderer>().material.color = Random.ColorHSV();
     }   
 }

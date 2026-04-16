@@ -8,7 +8,7 @@ public class InputReader : MonoBehaviour
    
     public event Action<Cube> MouseClicked;
     
-    private int _leftMouseClicked = 0;
+    private int _buttonClicked = 0;
 
     private void Update()
     {
@@ -16,7 +16,7 @@ public class InputReader : MonoBehaviour
         RaycastHit hit;
         Debug.DrawRay(_ray.origin, _ray.direction * _maxDistance, Color.red);
 
-        if (Input.GetMouseButtonUp(_leftMouseClicked))
+        if (Input.GetMouseButtonUp(_buttonClicked))
         {
 
             if (Physics.Raycast(_ray, out hit, Mathf.Infinity))

@@ -14,16 +14,15 @@ public class CubeSpawner : MonoBehaviour
         }
     }
 
-    public List<Rigidbody> SpawnObjects(Cube clickedCube)
+    public List<Cube> SpawnObjects(Cube clickedCube)
     {
-        List<Rigidbody> explodeObjects = new List<Rigidbody>();
+        List<Cube> explodeObjects = new List<Cube>();
         int countSpliteCube = UnityEngine.Random.Range(_minSpliteCube, _maxSpliteCube + 1);
 
         for (int i = 0; i < countSpliteCube; i++)
         {
-            var cubeCopy = Instantiate(clickedCube.gameObject, clickedCube.transform.position, clickedCube.transform.rotation);
-            Rigidbody createdCubeRigidbody = cubeCopy.GetComponent<Rigidbody>();
-            explodeObjects.Add(createdCubeRigidbody);
+            var cubeCopy = Instantiate(clickedCube, clickedCube.transform.position, clickedCube.transform.rotation);
+            explodeObjects.Add(cubeCopy);
         }
 
         return explodeObjects;
